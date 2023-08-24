@@ -3,9 +3,9 @@
 {% block content %}
 <h1>{{title}}</h1>
 
-<form action="{% url 'add_page' %}" method="post">
+<form action="{% url 'add_page' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-
+    {% comment %} {{ form.as_p }} {% endcomment %}
     
     <div class="form-error">{{ form.non_field_errors }}</div> {% comment %} отображать ошибки не связяанные с полями {% endcomment %}
     
