@@ -7,6 +7,8 @@ menu = [{'title': "О сайте", 'url_name': 'about'},
 ]
 
 class DataMixin:
+    paginate_by = 2 #paginator, page_obj ListView передаёт автоматически в шаблон
+    
     def get_user_context(self, **kwargs):
         context = kwargs
         cats = Category.objects.annotate(Count('women'))
