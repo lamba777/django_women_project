@@ -7,7 +7,7 @@ menu = [{'title': "О сайте", 'url_name': 'about'},
 ]
 
 class DataMixin:
-    paginate_by = 20 #paginator, page_obj ListView передаёт автоматически в шаблон
+    paginate_by = 3 #paginator, page_obj ListView передаёт автоматически в шаблон
     
     def get_user_context(self, **kwargs):
         context = kwargs
